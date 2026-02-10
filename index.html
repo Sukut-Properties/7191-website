@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="71-91, LLC - Dirt, concrete & asphalt disposal in Corona, CA. Accepting clean dirt, mixed materials, concrete, and asphalt. Competitive pricing for all truck sizes.">
+    <title>71-91, LLC | Construction Material Disposal - Corona, CA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-content">
+            <a href="#" class="logo">
+                <svg class="logo-icon" viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 24h8l2-8h22l4 8h4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M14 24l4-16h16l2 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="10" cy="26" r="3" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="38" cy="26" r="3" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <span class="logo-text">71-91, LLC</span>
+            </a>
+            <nav class="nav" id="nav">
+                <a href="#calculator" class="nav-link">Quick Quote</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#materials" class="nav-link">Materials</a>
+                <a href="#hours" class="nav-link">Hours</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="status-badge" id="status-badge">
+                <span class="status-dot"></span>
+                <span class="status-text">Checking hours...</span>
+            </div>
+            <h1>71-91, LLC</h1>
+            <p class="hero-subtitle">Dirt, Concrete & Asphalt Disposal</p>
+            <p class="hero-location">Corona, CA</p>
+            <p class="hero-tagline">Serving Southern California Contractors</p>
+            <div class="hero-cta">
+                <a href="#calculator" class="btn btn-primary">Get Quick Quote</a>
+                <a href="tel:714-318-7949" class="btn btn-secondary btn-call">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                    Call Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Quote Calculator -->
+    <section class="section calculator" id="calculator">
+        <div class="container">
+            <h2>Quick Quote Calculator</h2>
+            <p class="section-subtitle">Select your truck size and material type to see estimated pricing.</p>
+
+            <div class="calculator-card">
+                <div class="calculator-form">
+                    <div class="calc-group">
+                        <label for="truck-size">
+                            <svg class="label-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="1" y="3" width="15" height="13" rx="2"/>
+                                <path d="M16 8h4l3 5v5h-7V8z"/>
+                                <circle cx="5.5" cy="18.5" r="2.5"/>
+                                <circle cx="18.5" cy="18.5" r="2.5"/>
+                            </svg>
+                            Truck Size
+                        </label>
+                        <select id="truck-size">
+                            <option value="">Select truck size...</option>
+                            <option value="flatbed">Flatbed / Pick-Up / Trailer</option>
+                            <option value="bobtail">Bobtail</option>
+                            <option value="10wheeler">10 Wheeler / 10 yd DOB</option>
+                            <option value="modified10">Modified 10 Wheeler</option>
+                            <option value="semi">All Semis</option>
+                            <option value="trucknpup">Truck n Pup</option>
+                        </select>
+                    </div>
+                    <div class="calc-group">
+                        <label for="material-type">
+                            <svg class="label-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                <path d="M2 17l10 5 10-5"/>
+                                <path d="M2 12l10 5 10-5"/>
+                            </svg>
+                            Material Type
+                        </label>
+                        <select id="material-type">
+                            <option value="">Select material...</option>
+                            <option value="clean-dirt">Clean Dirt</option>
+                            <option value="mixed-dirt">Dirt Mixed w/ Sod, Roots, Rocks, Concrete, Asphalt</option>
+                            <option value="asphalt-concrete">Clean Asphalt / Concrete</option>
+                            <option value="crushed-base">Crushed Misc. Base</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="calculator-result" id="calculator-result">
+                    <div class="result-placeholder">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                        <p>Select options above to see your estimate</p>
+                    </div>
+                </div>
+            </div>
+            <p class="calculator-note">* Final price determined by visual inspection at yard. Prices effective January 1, 2026.</p>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section pricing" id="pricing">
+        <div class="container">
+            <h2>2026 Pricing</h2>
+            <p class="section-subtitle">Effective January 1, 2026 &bull; Prices based on visual inspection at yard</p>
+
+            <div class="table-wrapper">
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Truck Size</th>
+                            <th>Clean Dirt</th>
+                            <th>Dirt Mixed w/ Sod, Roots, Rocks, Concrete, Asphalt</th>
+                            <th>Clean Asphalt / Concrete</th>
+                            <th>Crushed Misc. Base</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Truck Size">Flatbed / Pick-Up / Trailer</td>
+                            <td data-label="Clean Dirt">$240</td>
+                            <td data-label="Mixed Dirt">$240</td>
+                            <td data-label="Asphalt/Concrete">$240</td>
+                            <td data-label="Crushed Base">$8/ton</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Truck Size">Bobtail</td>
+                            <td data-label="Clean Dirt">$250</td>
+                            <td data-label="Mixed Dirt">$300</td>
+                            <td data-label="Asphalt/Concrete">$300</td>
+                            <td data-label="Crushed Base">$100 min</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Truck Size">10 Wheeler / 10 yd DOB</td>
+                            <td data-label="Clean Dirt">$300</td>
+                            <td data-label="Mixed Dirt">$480</td>
+                            <td data-label="Asphalt/Concrete">$350</td>
+                            <td data-label="Crushed Base">&mdash;</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Truck Size">Modified 10 Wheeler</td>
+                            <td data-label="Clean Dirt">$300</td>
+                            <td data-label="Mixed Dirt">$480</td>
+                            <td data-label="Asphalt/Concrete">$350</td>
+                            <td data-label="Crushed Base">&mdash;</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Truck Size">All Semis</td>
+                            <td data-label="Clean Dirt">$350</td>
+                            <td data-label="Mixed Dirt">$530</td>
+                            <td data-label="Asphalt/Concrete">$400</td>
+                            <td data-label="Crushed Base">&mdash;</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Truck Size">Truck n Pup</td>
+                            <td data-label="Clean Dirt">$350</td>
+                            <td data-label="Mixed Dirt">$530</td>
+                            <td data-label="Asphalt/Concrete">$400</td>
+                            <td data-label="Crushed Base">&mdash;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pricing-notes">
+                <div class="note">
+                    <svg class="note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="1" y="4" width="22" height="16" rx="2"/>
+                        <line x1="1" y1="10" x2="23" y2="10"/>
+                    </svg>
+                    <div>
+                        <strong>Payment:</strong> Cash (exact change), checks payable to "71-91, LLC", all major credit cards accepted.
+                    </div>
+                </div>
+                <div class="note">
+                    <svg class="note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                    </svg>
+                    <div>
+                        <strong>Rebar:</strong> Must be cut close and tight with concrete. More rebar = higher price.
+                    </div>
+                </div>
+            </div>
+
+            <div class="download-section">
+                <a href="2026 Price List 1.pdf" class="btn btn-secondary" download>
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7 10 12 15 17 10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    Download Price List (PDF)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Materials Section -->
+    <section class="section materials" id="materials">
+        <div class="container">
+            <h2>Accepted Materials</h2>
+            <div class="materials-grid">
+                <div class="material-card accepted">
+                    <div class="material-header">
+                        <div class="material-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </div>
+                        <h3>We Accept</h3>
+                    </div>
+                    <ul>
+                        <li>
+                            <svg class="item-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <circle cx="12" cy="12" r="8"/>
+                            </svg>
+                            Clean Dirt
+                        </li>
+                        <li>
+                            <svg class="item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2a10 10 0 1 0 10 10H12V2z"/>
+                            </svg>
+                            Sod & Roots
+                        </li>
+                        <li>
+                            <svg class="item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/>
+                            </svg>
+                            Rocks
+                        </li>
+                        <li>
+                            <svg class="item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                <line x1="3" y1="9" x2="21" y2="9"/>
+                                <line x1="9" y1="21" x2="9" y2="9"/>
+                            </svg>
+                            Concrete
+                        </li>
+                        <li>
+                            <svg class="item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="6" width="20" height="12" rx="1"/>
+                                <line x1="2" y1="12" x2="22" y2="12"/>
+                            </svg>
+                            Asphalt
+                        </li>
+                        <li>
+                            <svg class="item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                <path d="M2 17l10 5 10-5"/>
+                                <path d="M2 12l10 5 10-5"/>
+                            </svg>
+                            Crushed Miscellaneous Base
+                        </li>
+                    </ul>
+                </div>
+                <div class="material-card rejected">
+                    <div class="material-header">
+                        <div class="material-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="18" y1="6" x2="6" y2="18"/>
+                                <line x1="6" y1="6" x2="18" y2="18"/>
+                            </svg>
+                        </div>
+                        <h3>Not Accepted</h3>
+                    </div>
+                    <ul>
+                        <li>
+                            <svg class="item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="3 6 5 6 21 6"/>
+                                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                            </svg>
+                            Trash
+                        </li>
+                        <li>
+                            <svg class="item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16v16H4z"/>
+                                <path d="M4 12h16"/>
+                                <path d="M12 4v16"/>
+                            </svg>
+                            Plastics
+                        </li>
+                        <li>
+                            <svg class="item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                <polyline points="9 22 9 12 15 12 15 22"/>
+                            </svg>
+                            Household Waste
+                        </li>
+                        <li>
+                            <svg class="item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                                <line x1="12" y1="9" x2="12" y2="13"/>
+                                <line x1="12" y1="17" x2="12.01" y2="17"/>
+                            </svg>
+                            Hazardous Materials
+                        </li>
+                    </ul>
+                    <p class="warning">
+                        <svg class="warning-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="12" y1="8" x2="12" y2="12"/>
+                            <line x1="12" y1="16" x2="12.01" y2="16"/>
+                        </svg>
+                        Loads containing prohibited items may be refused.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before You Arrive Section -->
+    <section class="section checklist" id="checklist">
+        <div class="container">
+            <h2>Before You Arrive</h2>
+            <p class="section-subtitle">Help us serve you faster by being prepared.</p>
+
+            <div class="checklist-grid">
+                <div class="checklist-item">
+                    <div class="checklist-number">1</div>
+                    <div class="checklist-content">
+                        <h3>Cover Your Load</h3>
+                        <p>Secure tarps or covers to prevent debris on the road.</p>
+                    </div>
+                </div>
+                <div class="checklist-item">
+                    <div class="checklist-number">2</div>
+                    <div class="checklist-content">
+                        <h3>Sort Materials</h3>
+                        <p>Separate clean dirt from mixed materials when possible for best pricing.</p>
+                    </div>
+                </div>
+                <div class="checklist-item">
+                    <div class="checklist-number">3</div>
+                    <div class="checklist-content">
+                        <h3>Cut Rebar Tight</h3>
+                        <p>Rebar must be cut close to concrete. Excess rebar increases price.</p>
+                    </div>
+                </div>
+                <div class="checklist-item">
+                    <div class="checklist-number">4</div>
+                    <div class="checklist-content">
+                        <h3>Have Payment Ready</h3>
+                        <p>Cash (exact change), check, or credit card. Checks payable to "71-91, LLC".</p>
+                    </div>
+                </div>
+                <div class="checklist-item">
+                    <div class="checklist-number">5</div>
+                    <div class="checklist-content">
+                        <h3>No Trash or Plastics</h3>
+                        <p>Loads with prohibited items will be refused or charged extra.</p>
+                    </div>
+                </div>
+                <div class="checklist-item">
+                    <div class="checklist-number">6</div>
+                    <div class="checklist-content">
+                        <h3>Know Your Load</h3>
+                        <p>Be ready to describe your material type and truck size for quick inspection.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hours & Location Section -->
+    <section class="section hours" id="hours">
+        <div class="container">
+            <h2>Hours & Location</h2>
+            <div class="hours-grid">
+                <div class="hours-info">
+                    <h3>
+                        <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                        Hours of Operation
+                    </h3>
+                    <table class="hours-table">
+                        <tr>
+                            <td>Monday - Thursday</td>
+                            <td>6:00 AM - 4:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>6:00 AM - 4:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>Upon Request</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>Closed</td>
+                        </tr>
+                    </table>
+                    <p class="hours-note">* Hours subject to change without notice</p>
+
+                    <div class="address">
+                        <h3>
+                            <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            Site Address
+                        </h3>
+                        <p>11901 Highway 71<br>Corona, CA 92881</p>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=11901+Highway+71+Corona+CA+92881" class="btn btn-secondary" target="_blank" rel="noopener">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="3 11 22 2 13 21 11 13 3 11"/>
+                            </svg>
+                            Get Directions
+                        </a>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.5!2d-117.5!3d33.85!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcc57b1c9d8e8d%3A0x0!2s11901%20Highway%2071%2C%20Corona%2C%20CA%2092881!5e0!3m2!1sen!2sus!4v1"
+                        width="100%"
+                        height="400"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="71-91, LLC Location Map">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq" id="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What counts as "clean dirt"?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Clean dirt is natural soil without any debris, rocks, roots, concrete, asphalt, or other materials mixed in. It should be free of contaminants and ready for reuse or fill.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Do you accept loads on Saturday?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Saturday hours are by request only. Call Max at 714-318-7949 in advance to schedule a Saturday drop-off. Availability depends on staffing and current capacity.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Why was my load refused or priced higher?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Common reasons include: trash or plastics mixed in (we don't accept these), excessive rebar that isn't cut tight, or materials that don't match what was described. Our foremen inspect all loads on arrival and price based on what they see.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>How should rebar be handled?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Rebar must be cut close and tight to the concrete—no long pieces sticking out. The more exposed rebar in your load, the higher the price. Clean concrete with minimal rebar gets the best rates.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What payment methods do you accept?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We accept cash (please bring exact change), checks (payable to "71-91, LLC"), and all major credit cards. Payment is due at time of service.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Do you offer accounts for contractors?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>For contractor accounts and volume pricing, contact Jeff at our corporate office: 714-460-1015.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-grid">
+                <a href="tel:714-318-7949" class="contact-card">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="1" y="3" width="15" height="13" rx="2"/>
+                            <path d="M16 8h4l3 5v5h-7V8z"/>
+                            <circle cx="5.5" cy="18.5" r="2.5"/>
+                            <circle cx="18.5" cy="18.5" r="2.5"/>
+                        </svg>
+                    </div>
+                    <h3>Dump Site</h3>
+                    <p class="contact-name">Max</p>
+                    <span class="contact-phone">714-318-7949</span>
+                    <span class="contact-tap">Tap to Call</span>
+                </a>
+                <a href="tel:714-460-1015" class="contact-card">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
+                    </div>
+                    <h3>Corporate Office</h3>
+                    <p class="contact-name">Jeff</p>
+                    <span class="contact-phone">714-460-1015</span>
+                    <span class="contact-tap">Tap to Call</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Email Signup Section -->
+    <section class="section signup" id="signup">
+        <div class="container">
+            <h2>Stay Updated</h2>
+            <p class="section-subtitle">Get notified about price changes, holiday hours, and promotions.</p>
+            <form class="signup-form" id="signup-form"
+                  action="https://assets.mailerlite.com/jsonp/2104197/forms/179030791540442786/subscribe"
+                  method="post"
+                  data-mailerlite-form="true">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="fields[name]" placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="fields[email]" required placeholder="your@email.com">
+                    </div>
+                    <input type="hidden" name="ml-submit" value="1">
+                    <input type="hidden" name="anticsrf" value="true">
+                    <button type="submit" class="btn btn-primary btn-submit">Subscribe</button>
+                </div>
+            </form>
+            <div class="form-message" id="form-message"></div>
+            <p class="form-privacy">You can unsubscribe anytime. We respect your privacy.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">71-91, LLC</span>
+                    <p>A Sukut Company</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#calculator">Quick Quote</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#materials">Materials</a>
+                    <a href="#hours">Hours</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 71-91, LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

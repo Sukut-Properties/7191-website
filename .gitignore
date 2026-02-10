@@ -1,0 +1,16 @@
+# Credentials and sensitive info
+7191 Information.txt
+*.credentials
+*.secret
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+*.swp
+*.swo
+
+# Claude files
+.claude/
