@@ -117,8 +117,7 @@ function updateStatus() {
     } else if (isWeekday) {
         if (currentMinutes >= openTime && currentMinutes < closeTime) {
             isOpen = true;
-            const closeHour = 4;
-            statusMessage = `Open Now \u2022 Until ${closeHour}PM`;
+            statusMessage = 'Open Now \u2022 Last Load 3:30PM';
         } else if (currentMinutes < openTime) {
             isOpen = false;
             statusMessage = 'Closed \u2022 Opens Today 6AM';
