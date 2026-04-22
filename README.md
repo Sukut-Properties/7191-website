@@ -40,12 +40,13 @@ npx serve
 
 ## Deployment
 
-The site is deployed via Netlify. To update:
+This repo is connected to Netlify for **continuous deployment**. Any push to the `master` branch automatically builds and publishes to production at https://7191dumpsite.com — no manual steps required.
 
-1. Make changes locally
-2. Drag and drop the folder to [Netlify Drop](https://app.netlify.com/drop)
+To deploy changes:
 
-Or connect this repo to Netlify for automatic deployments on push.
+1. Commit locally
+2. `git push origin master`
+3. Netlify picks up the push and publishes within ~1 minute
 
 ## Files
 
