@@ -99,7 +99,7 @@ function updateStatus() {
 
     const currentMinutes = hours * 60 + minutes;
     const openTime = 6 * 60;  // 6:00 AM
-    const closeTime = 16 * 60; // 4:00 PM
+    const closeTime = 15 * 60 + 30; // 3:30 PM
 
     let isOpen = false;
     let statusMessage = '';
@@ -117,7 +117,7 @@ function updateStatus() {
     } else if (isWeekday) {
         if (currentMinutes >= openTime && currentMinutes < closeTime) {
             isOpen = true;
-            statusMessage = 'Open Now \u2022 Last Load 3:30PM';
+            statusMessage = 'Open Now \u2022 Closes 3:30PM';
         } else if (currentMinutes < openTime) {
             isOpen = false;
             statusMessage = 'Closed \u2022 Opens Today 6AM';
