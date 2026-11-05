@@ -48,6 +48,16 @@ To deploy changes:
 2. `git push origin master`
 3. Netlify picks up the push and publishes within ~1 minute
 
+## Business Hours
+
+Current hours: **Mon–Fri 6:00 AM – 3:30 PM**, Saturday by request, Sunday closed. The site does not list a separate last-load cutoff.
+
+Hours appear in three places. Update all of them together:
+
+1. `index.html` – hero line (`.hero-hours`)
+2. `index.html` – Hours of Operation table (`.hours-table`)
+3. `script.js` – `openTime` / `closeTime` and the "Open Now" message in `updateStatus()` (drives the Open/Closed badge, Pacific time)
+
 ## Files
 
 - `index.html` - Main HTML structure
